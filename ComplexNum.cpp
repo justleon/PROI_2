@@ -1,4 +1,5 @@
 #include <cmath>
+#include "HelpFuncs.h"
 #include "ComplexNum.h"
 
 //constructors
@@ -41,5 +42,5 @@ ComplexNum& ComplexNum::operator-=(ComplexNum num)
 //friends
 std::ostream& operator<<(std::ostream& os, ComplexNum& num)
 {
-    return os << "Real part: " << num.re << " Imaginary part: " << num.im << std::endl;
+    return os << num.re << checkSign(num.im) << num.im << "i" << std::endl;
 }

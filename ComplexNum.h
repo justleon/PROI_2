@@ -1,12 +1,12 @@
-#ifndef COMPLEXNUM_H_INCLUDED
-#define COMPLEXNUM_H_INCLUDED
+#ifndef COMPLEXNUM_H
+#define COMPLEXNUM_H
 
 #include <iostream>
 
 class ComplexNum{
     int re;
     int im;
-    int mod;
+    double mod;
 public:
     ComplexNum();
     ComplexNum(int r, int i);
@@ -18,4 +18,4 @@ public:
     friend std::ostream& operator<<(std::ostream& os, ComplexNum& num);
 };
 
-#endif // COMPLEXNUM_H_INCLUDED
+#endif // COMPLEXNUM_H

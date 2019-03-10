@@ -1,9 +1,10 @@
-//
-// Created by Leon on 2019-03-09.
-//
+/*
+ * Author: Łukasz Pokorzyński, Warsaw University of Technology
+ * Implementation of functions from HelpFuncs.h
+ */
 
 #include "HelpFuncs.h"
 
-std::string checkSign(int i){
+std::string checkSign(double i){
    return (i > 0) ? "+" : "";
 }

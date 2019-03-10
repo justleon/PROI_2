@@ -60,7 +60,7 @@ ComplexNum& ComplexNum::operator*=(ComplexNum num)
     return *this;
 }
 
-ComplexNum ComplexNum::operator~()
+ComplexNum ComplexNum::operator~()  //conjugation
 {
     return {re, -im};
 }

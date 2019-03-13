@@ -92,5 +92,6 @@ std::ostream& operator<<(std::ostream& os, const ComplexNum& num)
 {
     if(num.re != 0){ os << num.re; }
     if(num.im != 0){ os << checkSign(num.im) << num.im << "i"; }
+    if(0 == num.re && 0 == num.im){ os << "0"; }
     return os;
 }

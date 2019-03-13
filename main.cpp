@@ -14,6 +14,7 @@ int main()
 
     stack2.push(num3);
     stack2.push(num4);
+    stack2 += num5;
 
     std::cout << "\nStack 1:\n" << stack1 << "\nStack 2:\n" << stack2 << std::endl;
 
@@ -28,6 +29,6 @@ int main()
 
     std::cout << "\nnum2 == num3: " << (num2 == num3)
               << "\nnum4 - num2: " << num4 - num2
-              << "\nnum1 * num2: " << num1 * num2 << std::endl;
-    std::cin.get();
+              << "\nnum1 * num2: " << num1 * num2
+              << "\nArgument of num5: " << num5.arg() << std::endl;
 }

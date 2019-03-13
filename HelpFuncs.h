@@ -9,5 +9,6 @@
 #include <string>
 
 std::string checkSign(double i);
+bool checkAlloc(void* node);
 
 #endif //HELPFUNCS_H

@@ -6,6 +6,7 @@
 #include <iostream>
 #include <climits>
 #include "ComplexStack.h"
+#include "HelpFuncs.h"
 
 //constructors/destructors
 ComplexStack::ComplexStack()
@@ -42,14 +43,16 @@ bool ComplexStack::isEmpty()
 void ComplexStack::push(ComplexNum num)
 {
     if(this->size() != UINT_MAX){
+        Node* new_node;
         if(topNode == nullptr){
-            topNode = new Node{num, nullptr};
-            el++;
+            new_node = new Node{num, nullptr};
+            if(!checkAlloc(new_node)){ return; }
         } else{
-            Node* new_node = new Node{num, topNode};
-            topNode = new_node;
-            el++;
+            new_node = new Node{num, topNode};
+            if(!checkAlloc(new_node)){ return; }
         }
+        topNode = new_node;
+        el++;
     } else{
         std::cout << "Stack is full! Can't add any more elements!" << std::endl;
     }

@@ -12,7 +12,7 @@ main.o: main.cpp ComplexNum.h HelpFuncs.h
 ComplexNum.o: ComplexNum.cpp ComplexNum.h HelpFuncs.h
 	$(CC) -c ComplexNum.cpp ComplexNum.h HelpFuncs.h
 
-ComplexStack.o: ComplexStack.cpp ComplexStack.h ComplexNum.h
+ComplexStack.o: ComplexStack.cpp ComplexStack.h ComplexNum.h HelpFuncs.h
 	$(CC) -c ComplexStack.cpp ComplexStack.h ComplexNum.h
 
 HelpFuncs.o: HelpFuncs.cpp HelpFuncs.h

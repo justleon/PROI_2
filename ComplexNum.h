@@ -16,21 +16,22 @@ public:
     ComplexNum(double r, double i);
 
     //methods
-    double modulo();
+    double abs();
+    double arg();
 
     //operators
-    ComplexNum operator+(ComplexNum num);
-    ComplexNum operator-(ComplexNum num);
-    ComplexNum operator*(ComplexNum num);
-    ComplexNum& operator+=(ComplexNum num);
-    ComplexNum& operator-=(ComplexNum num);
-    ComplexNum& operator*=(ComplexNum num);
+    ComplexNum operator+(const ComplexNum& num);
+    ComplexNum operator-(const ComplexNum& num);
+    ComplexNum operator*(const ComplexNum& num);
+    ComplexNum& operator+=(const ComplexNum& num);
+    ComplexNum& operator-=(const ComplexNum& num);
+    ComplexNum& operator*=(const ComplexNum& num);
     ComplexNum operator~(); //conjugation
-    bool operator==(ComplexNum num);
-    bool operator!=(ComplexNum num);
+    bool operator==(const ComplexNum& num);
+    bool operator!=(const ComplexNum& num);
 
     //friends
-    friend std::ostream& operator<<(std::ostream& os, ComplexNum& num);
+    friend std::ostream& operator<<(std::ostream& os, const ComplexNum& num);
 };
 
 #endif //COMPLEXNUM_H

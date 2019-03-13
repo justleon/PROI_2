@@ -30,11 +30,11 @@ public:
     void swap(ComplexStack& stack);
 
     //operators
-    ComplexStack& operator+(ComplexNum num);
-    ComplexStack& operator+=(ComplexNum num);
+    ComplexStack& operator+(const ComplexNum& num);
+    ComplexStack& operator+=(const ComplexNum& num);
 
     //friends
-    friend std::ostream& operator<<(std::ostream& os, ComplexStack& stack);
+    friend std::ostream& operator<<(std::ostream& os, const ComplexStack& stack);
 };
 
 #endif //COMPLEXSTACK_H

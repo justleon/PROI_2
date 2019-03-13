@@ -78,23 +78,23 @@ void ComplexStack::swap(ComplexStack& stack)
 }
 
 //operators
-ComplexStack& ComplexStack::operator+(ComplexNum num)
+ComplexStack& ComplexStack::operator+(const ComplexNum& num)
 {
     (*this).push(num);
     return *this;
 }
 
-ComplexStack& ComplexStack::operator+=(ComplexNum num)
+ComplexStack& ComplexStack::operator+=(const ComplexNum& num)
 {
     return *this + num;
 }
 
 //friends
-std::ostream& operator<<(std::ostream& os, ComplexStack& stack)
+std::ostream& operator<<(std::ostream& os, const ComplexStack& stack)
 {
-    if(!(stack.isEmpty())) {
+    if(stack.el != 0) {
         ComplexStack::Node *temp = stack.topNode;
-        os << "From newest to oldest: " << std::endl;
+        os << "From top to bottom: " << std::endl;
         while (temp != nullptr) {
             os << "> " << temp->num << std::endl;
             temp = temp->back;

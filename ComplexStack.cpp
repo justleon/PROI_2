@@ -46,10 +46,10 @@ void ComplexStack::push(ComplexNum num)
         Node* new_node;
         if(topNode == nullptr){
             new_node = new Node{num, nullptr};
-            if(!checkAlloc(new_node)){ return; }
+            if(!checkAlloc(new_node)){ delete new_node; return; }
         } else{
             new_node = new Node{num, topNode};
-            if(!checkAlloc(new_node)){ return; }
+            if(!checkAlloc(new_node)){ delete new_node; return; }
         }
         topNode = new_node;
         el++;

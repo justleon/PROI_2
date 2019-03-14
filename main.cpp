@@ -27,8 +27,7 @@ int main()
     }
     std::cout << "Stack 1:\n" << stack1 << "num1: " << num1 << std::endl;
 
-    std::cout << "\nnum2 == num3: " << (num2 == num3)
-              << "\nnum4 - num2: " << num4 - num2
-              << "\nnum1 * num2: " << num1 * num2
-              << "\nArgument of num5: " << num5.arg() << std::endl;
+    std::cout << "\nnum2 == num3: " << (num2 == num3) << "\nnum4 - num2: " << num4 - num2
+              << "\nnum1 * num2: " << num1 * num2 << std::endl;
+    std::cout << "\nArgument of num5: " << num5.arg() << std::endl;
 }
